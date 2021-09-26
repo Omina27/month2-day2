@@ -1,0 +1,85 @@
+* {
+    box-sizing: inherit;
+}
+
+body {
+    perspective: 2000px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(./../images/yellow-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.box {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    border: 10px solid #2B0C10;
+    margin: 0;
+    margin-top: 70px;   
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    background-image: url(./../images/garden@1x.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+/* Retina ekran uchun CSS kod */
+
+      .box {
+          background-image: url("../image/garden@2x.jpg");
+        }   
+
+    
+    .box:hover .box__item {
+        border: 5px solid goldenrod;
+        background-image: linear-gradient(rgba(45, 124, 244, 0.5), rgba(45,124,244, 0.5));
+      }
+    /* transform: rotate(20deg); */
+
+
+.box__left {
+    width: 392px;
+    height: 484px;
+    border: 15px solid #2B0C10;
+    margin: 0;
+    padding: 0;
+    background-image:linear-gradient(rgba(45,124,244, 0.5) rgba(45,124,244, 0.5));
+    transform-origin:left;
+    transition:all 3s;
+}
+
+.box:hover .box__left {
+    transform: rotateY(-120deg);
+    transition: 2.5 ease;
+    /* transform:skewY(-30deg) */
+}
+
+.box__right {
+    width: 392px;
+    height: 484px;
+    border: 15px solid #2B0C10;
+    margin: 0;
+    padding: 0;
+    background-image:linear-gradient(rgba(45,124,244, 0.5) rgba(45,124,244, 0.5));
+    transform-origin: right;
+    transition:all 3s;
+}
+
+.box:hover .box__right {
+    transform: rotateY(120deg);
+    transition:2.5 ease;
+}
+    
+    
